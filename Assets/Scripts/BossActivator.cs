@@ -8,6 +8,7 @@ public class BossActivator : MonoBehaviour
 
     public string bossRef;
 
+    // Looks if the player is close enough of the boss to start the combact
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")

@@ -22,6 +22,7 @@ public class BombController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Takes care of when the bomb explods if we are in ball mode...
         timeToExplode -= Time.deltaTime;
         if(timeToExplode <= 0)
         {
@@ -44,6 +45,7 @@ public class BombController : MonoBehaviour
 
             Collider2D[] objectsToDamage = Physics2D.OverlapCircleAll(transform.position, blastRange, whatIsDamageable);
 
+            // Takes care of the destruction of blocks
             foreach(Collider2D col in objectsToDamage)
             {
                 EnemyHealthController enemyHealth = col.GetComponent<EnemyHealthController>();

@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource[] sfx;
 
-
+    // Takes care of the music
     public void PlayMainMenuMusic()
     {
         levelMusic.Stop();
@@ -48,6 +48,7 @@ public class AudioManager : MonoBehaviour
         bossMusic.Play();
     }
 
+    // Takes care of diffrent sounds
     public void PlaySFX(int sfxToPlay)
     {
         sfx[sfxToPlay].Stop();

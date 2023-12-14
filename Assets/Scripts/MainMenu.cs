@@ -22,6 +22,7 @@ public class MainMenu : MonoBehaviour
         AudioManager.instance.PlayMainMenuMusic();
     }
 
+    // Just restarts a new game when button pushed
     public void NewGame()
     {
         PlayerPrefs.DeleteAll();
@@ -29,6 +30,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(newGameScene);
     }
 
+    // Restarts from where the player was with the diffrent abbilites...
     public void Continue()
     {
         player.gameObject.SetActive(true);

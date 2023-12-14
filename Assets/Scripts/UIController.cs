@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
+    // Takes care of all the Ui in the game
     public static UIController instance;
 
     private void Awake()

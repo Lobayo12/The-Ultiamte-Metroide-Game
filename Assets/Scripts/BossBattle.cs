@@ -46,6 +46,7 @@ public class BossBattle : MonoBehaviour
     }
 
     // Update is called once per frame
+    // Takes care of how the boss moves when he fades...
     void Update()
     {
         theCam.transform.position = Vector3.MoveTowards(theCam.transform.position, camPosition.position, camSpeed * Time.deltaTime);
@@ -191,6 +192,7 @@ public class BossBattle : MonoBehaviour
         }
     }
 
+    // takes care of annimation when the boss dies...
     public void EndBattle()
     {
         battleEnded = true;

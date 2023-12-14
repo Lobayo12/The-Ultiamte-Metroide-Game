@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-
+                // Takes care of the dashing
                 if (Input.GetButtonDown("Fire2") && standing.activeSelf && abilities.canDash)
                 {
                     dashCounter = dashTime;
@@ -105,10 +105,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            //checking if on the ground
+            //Takes care of checking if on the ground
             isOnGround = Physics2D.OverlapCircle(groundPoint.position, .2f, whatIsGround);
 
-            //jumping
+            // Takes care of jumping
             if (Input.GetButtonDown("Jump") && (isOnGround || (canDoubleJump && abilities.canDoubleJump)))
             {
                 if (isOnGround)
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
                 theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
             }
 
-            //shooting
+            //Takes care of shooting
             if (Input.GetButtonDown("Fire1"))
             {
                 if (standing.activeSelf)
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            //ball mode
+            // Takes care of ball mode
             if (!ball.activeSelf)
             {
                 if (Input.GetAxisRaw("Vertical") < -.9f && abilities.canBecomeBall)

@@ -25,6 +25,7 @@ public class BossHealthController : MonoBehaviour
         bossHealthSlider.value = currentHealth;
     }
 
+    // Takes care of the bosses damage and life
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;

@@ -19,6 +19,7 @@ public class BulletController : MonoBehaviour
         theRB.velocity = moveDir * bulletSpeed;
     }
 
+    // Makes the shot give damage to ennemies and only ennemies
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Enemy")

@@ -8,6 +8,7 @@ public class AudioLoader : MonoBehaviour
 
     private void Awake()
     {
+        // Takes care of sound
         if(AudioManager.instance == null)
         {
             AudioManager newAM = Instantiate(theAM);

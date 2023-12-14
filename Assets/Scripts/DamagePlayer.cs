@@ -17,6 +17,7 @@ public class DamagePlayer : MonoBehaviour
         }
     }
 
+    // Calls the function to make damage when recived a damag
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
@@ -25,6 +26,8 @@ public class DamagePlayer : MonoBehaviour
         }
     }
 
+
+    // Takes care of dealing damag to the player
     void DealDamage()
     {
         PlayerHealthController.instance.DamagePlayer(damageAmount);

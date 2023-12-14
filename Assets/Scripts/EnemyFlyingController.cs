@@ -22,6 +22,7 @@ public class EnemyFlyingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Takes care of the ennemy chassing the player or not
         if(!isChasing)
         {
             if(Vector3.Distance(transform.position, player.position) < rangeToStartChase)

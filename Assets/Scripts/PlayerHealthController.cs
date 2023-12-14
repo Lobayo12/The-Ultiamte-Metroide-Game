@@ -18,8 +18,9 @@ public class PlayerHealthController : MonoBehaviour
         }
     }
 
-    //[HideInInspector]
+    [HideInInspector]
     public int currentHealth;
+
     public int maxHealth;
 
     public float invincibilityLength;
@@ -41,6 +42,7 @@ public class PlayerHealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // takes care of the health the invincibility moment after being hit....
         if(invincCounter > 0)
         {
             invincCounter -= Time.deltaTime;
@@ -67,6 +69,8 @@ public class PlayerHealthController : MonoBehaviour
     }
 
 
+
+    // Damages the player
     public void DamagePlayer(int damageAmount)
     {
         if (invincCounter <= 0)

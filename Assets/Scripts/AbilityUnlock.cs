@@ -12,6 +12,8 @@ public class AbilityUnlock : MonoBehaviour
     public string unlockMessage;
     public TMP_Text unlockText;
 
+
+    // Takes care of the unlocking of diffrent abilites
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
@@ -46,6 +48,7 @@ public class AbilityUnlock : MonoBehaviour
                 PlayerPrefs.SetInt("BombUnlocked", 1);
             }
 
+            // Takes care of the effects and text when we get a naw abiliti
             Instantiate(pickupEffect, transform.position, transform.rotation);
 
             unlockText.transform.parent.SetParent(null);

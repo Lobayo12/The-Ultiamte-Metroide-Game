@@ -27,6 +27,7 @@ public class BossBullet : MonoBehaviour
         theRB.velocity = -transform.right * moveSpeed;
     }
 
+    // Takes care of putting damage to the player and shoot
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == "Player")

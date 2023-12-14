@@ -8,6 +8,7 @@ public class EnemyHealthController : MonoBehaviour
 
     public GameObject deathEffect;
 
+    // Takes care of the enemy healt
     public void DamageEnemy(int damageAmount)
     {
         totalHealth -= damageAmount;

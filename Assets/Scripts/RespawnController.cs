@@ -52,6 +52,7 @@ public class RespawnController : MonoBehaviour
         StartCoroutine(RespawnCo());
     }
 
+    // takes care of respawning at the right place at the last checkPoint
     IEnumerator RespawnCo()
     {
         thePlayer.SetActive(false);
