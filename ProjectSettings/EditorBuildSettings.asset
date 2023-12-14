@@ -13,8 +13,14 @@ EditorBuildSettings:
     guid: 336636b60f44d384facba4d37ce054fc
   - enabled: 1
     path: Assets/Scenes/Area 2.unity
-    guid: 714420ee89e0a2e43aca18772559d8a8
+    guid: cae6517b1ab5d6b4880544289a064de6
   - enabled: 1
     path: Assets/Scenes/Boss 1.unity
     guid: d66094ba38ae4ff449c316ef9ce82a8b
+  - enabled: 1
+    path: Assets/Scenes/Area 3.unity
+    guid: 7debe9687a23172428a31e047b6805a4
+  - enabled: 1
+    path: Assets/Scenes/Area 4.unity
+    guid: 9dae66728d7bb3b47bf86198c1a27dbe
   m_configObjects: {}
