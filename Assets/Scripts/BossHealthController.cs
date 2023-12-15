@@ -14,7 +14,7 @@ public class BossHealthController : MonoBehaviour
 
     public Slider bossHealthSlider;
 
-    public int currentHealth = 30;
+    public int currentHealth = 50;
 
     public BossBattle theBoss;
 

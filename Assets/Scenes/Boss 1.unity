@@ -9393,7 +9393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THE PHANTOM
+  m_text: THE PHANTOM JR.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80f909dd02bb36241bf4082641a081b0, type: 2}
   m_sharedMaterial: {fileID: -289713166465256780, guid: 80f909dd02bb36241bf4082641a081b0, type: 2}
@@ -9564,7 +9564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossToActivate: {fileID: 1116188326}
-  bossRef: Phantom
+  bossRef: Phantom Jr.
 --- !u!61 &289579552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10804,7 +10804,7 @@ MonoBehaviour:
   bullet: {fileID: 4769934937810269425, guid: fbc5b1a96e64e034ba42655e88e64898, type: 3}
   shotPoint: {fileID: 1514936184}
   winObjects: {fileID: 446646610}
-  bossRef: Phantom
+  bossRef: Phantom Jr.
 --- !u!114 &1116188329
 MonoBehaviour:
   m_ObjectHideFlags: 0
