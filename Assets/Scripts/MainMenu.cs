@@ -77,4 +77,14 @@ public class MainMenu : MonoBehaviour
 
         Debug.Log("Game Quit");
     }
+
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }
