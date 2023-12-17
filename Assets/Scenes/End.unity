@@ -249,7 +249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations you won the ultimate metroide game
+  m_text: Congratulations you won the Ultimate Phantome Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80f909dd02bb36241bf4082641a081b0, type: 2}
   m_sharedMaterial: {fileID: -289713166465256780, guid: 80f909dd02bb36241bf4082641a081b0, type: 2}
