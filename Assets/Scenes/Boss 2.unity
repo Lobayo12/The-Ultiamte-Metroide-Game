@@ -528,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1264103759709499370, guid: 31d64a1aae6cd2c46b6724a8da9b732d, type: 3}
       propertyPath: m_Size.y
-      value: 20.5733
+      value: 25.201395
       objectReference: {fileID: 0}
     - target: {fileID: 1264103759709499370, guid: 31d64a1aae6cd2c46b6724a8da9b732d, type: 3}
       propertyPath: m_Offset.x
@@ -536,7 +536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1264103759709499370, guid: 31d64a1aae6cd2c46b6724a8da9b732d, type: 3}
       propertyPath: m_Offset.y
-      value: -0.32639647
+      value: -1.7148256
       objectReference: {fileID: 0}
     - target: {fileID: 1264103759709499371, guid: 31d64a1aae6cd2c46b6724a8da9b732d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -925,7 +925,7 @@ MonoBehaviour:
   distanceToOpen: 7.5
   exitPoint: {fileID: 1799639720}
   movePlayerSpeed: 10
-  levelToLoad: End
+  levelToLoad: Area 5
 --- !u!61 &593061668
 BoxCollider2D:
   m_ObjectHideFlags: 0
