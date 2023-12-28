@@ -11715,22 +11715,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5744082189501925277, guid: e608ba9ca1fa33940adf141d2fd73daf, type: 3}
-      propertyPath: canDash
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5744082189501925277, guid: e608ba9ca1fa33940adf141d2fd73daf, type: 3}
-      propertyPath: canDropBomb
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5744082189501925277, guid: e608ba9ca1fa33940adf141d2fd73daf, type: 3}
-      propertyPath: canBecomeBall
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5744082189501925277, guid: e608ba9ca1fa33940adf141d2fd73daf, type: 3}
-      propertyPath: canDoubleJump
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e608ba9ca1fa33940adf141d2fd73daf, type: 3}
 --- !u!1 &1734121124
