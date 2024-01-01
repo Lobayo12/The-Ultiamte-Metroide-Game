@@ -43,7 +43,6 @@ public class EnemyFlyingController : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, turnSpeed * Time.deltaTime);
 
 
-                //transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
                 transform.position += -transform.right * moveSpeed * Time.deltaTime;
             }
         }
