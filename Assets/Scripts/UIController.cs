@@ -114,6 +114,7 @@ public class UIController : MonoBehaviour
 
         instance = null;
         Destroy(gameObject);
+       
 
         SceneManager.LoadScene(mainMenuScene);
     }

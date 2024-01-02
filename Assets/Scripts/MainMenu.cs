@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject continueButton;
 
     public PlayerAbilityTracker player;
+
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +83,11 @@ public class MainMenu : MonoBehaviour
     public void Settings()
     {
         SceneManager.LoadScene("Settings");
+    }
+
+    public void Leaderboard()
+    {
+        SceneManager.LoadScene("Leaderboard");
     }
 
     public void BackToMainMenu()
