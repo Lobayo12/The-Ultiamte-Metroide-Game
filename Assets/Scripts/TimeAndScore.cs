@@ -11,6 +11,7 @@ public class TimeAndScore : MonoBehaviour
     
     public float currentTime;
 
+
     public Text textbox;
 
 
@@ -26,5 +27,8 @@ public class TimeAndScore : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         currentTime += Time.deltaTime;
         textbox.text = currentTime.ToString();
+
+        PlayerPrefs.GetString("Score playerPrefs" + textbox);
+        PlayerPrefs.Save();
     }
 }
