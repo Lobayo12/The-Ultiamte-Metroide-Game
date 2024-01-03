@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DoorController : MonoBehaviour
 {
+
     public Animator anim;
 
     public float distanceToOpen;
@@ -56,6 +58,12 @@ public class DoorController : MonoBehaviour
 
     IEnumerator UseDoorCo()
     {
+
+        PlayerPrefs.GetString("Score playerPrefs");
+        PlayerPrefs.Save();
+
+        
+
         playerExiting = true;
 
         thePlayer.anim.enabled = false;
