@@ -3205,10 +3205,10 @@ MonoBehaviour:
   submitScoreEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1595475227}
-        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
-        m_MethodName: SubmitScore
-        m_Mode: 1
+      - m_Target: {fileID: 1595475225}
+        m_TargetAssemblyTypeName: Leaderboard, Assembly-CSharp
+        m_MethodName: SetLeaderboardEntry
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
