@@ -6,11 +6,10 @@ using System.Linq;
 
 public class Leaderboard : MonoBehaviour
 {
-    [SerializeField]
-    private List<TextMeshProUGUI> names;
+    public List<TextMeshProUGUI> names;
 
-    [SerializeField]
-    private List<TextMeshProUGUI> scores;
+    
+    public List<TextMeshProUGUI> scores;
 
     private void Start()
     {
