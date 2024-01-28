@@ -16,11 +16,11 @@ public class Leaderboard : MonoBehaviour
         GetLeaderboard();
     }
 
-    private string publicLeaderboardKey = "56d2283ab670ade9f9a250818e2296117065060f47059d19553c7a898932ae45";
+    private string publicLeaderboardKey = "7fb4e10d9aff8b799af8dfecea3a94da1446866be781e02170931396d13de3ca";
     public void GetLeaderboard(){
         LeaderboardCreator.GetLeaderboard(publicLeaderboardKey, ((msg) => {
             int loopLength = (msg.Length < names.Count) ? msg.Length : names.Count;
-            for (int i = 0; i < names.Count; ++i) {
+            for (int i = 0; i < loopLength; ++i) {
                 names[i].text = msg[i].Username;
                 scores[i].text = msg[i].Score.ToString();
             }

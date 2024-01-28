@@ -1,11 +1,12 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI inputScore;
+    private Text inputScore;
 
     [SerializeField]
     private TMP_InputField inputName;
@@ -14,6 +15,6 @@ public class ScoreManager : MonoBehaviour
 
     public void SubmitScore()
     {
-        submitScoreEvent.Invoke(inputName.text, float.Parse(inputScore.text));
+        submitScoreEvent.Invoke(inputName.text, int.Parse(inputScore.text));
     }
 }
