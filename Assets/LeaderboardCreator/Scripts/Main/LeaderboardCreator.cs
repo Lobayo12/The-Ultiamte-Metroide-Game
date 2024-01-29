@@ -269,10 +269,5 @@ namespace Dan.Main
             if (!LoggingEnabled) return;
             Debug.LogError($"[LeaderboardCreator] {message}");
         }
-
-        public static void UploadNewEntry(string publicLeaderboardKey, string username, float score, Action<bool> value)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

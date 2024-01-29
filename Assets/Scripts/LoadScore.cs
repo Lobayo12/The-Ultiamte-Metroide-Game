@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class LoadScore : MonoBehaviour
 {
 
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
 
     public float score;
 

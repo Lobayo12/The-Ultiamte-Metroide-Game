@@ -27,8 +27,10 @@ namespace LeaderboardCreatorEditor
         {
             public List<SavedLeaderboard> leaderboards;
         }
-        
-        private const string SAVED_LEADERBOARDS_KEY = "LEADERBOARD_CREATOR___SAVED_LEADERBOARDS";
+
+        private const string ITCH_PAGE_URL = "https://danqzq.itch.io/leaderboard-creator";
+        private const string AUTHOR_URL = "https://www.danqzq.games";
+        private const string VERSION = "2.7";
 
         private static bool _isAddLeaderboardMenuOpen;
         private static string _name, _publicKey, _secretKey;
@@ -47,6 +49,33 @@ namespace LeaderboardCreatorEditor
             window.minSize = new Vector2(400, 475);
             window.titleContent = new GUIContent("Leaderboard Creator");
             window.Show();
+
+            CheckVersion();
+        }
+
+        private static void CheckVersion()
+        {
+            var request = UnityEngine.Networking.UnityWebRequest.Get("https://lcv2-server.danqzq.games/version");
+            var operation = request.SendWebRequest();
+            Log("Checking for updates...");
+            operation.completed += _ =>
+            {
+                if (request.responseCode != 200) return;
+                var response = request.downloadHandler.text;
+                if (response == VERSION)
+                {
+                    Log("<color=green><b>Leaderboard Creator is up to date!</b></color>");
+                    return;
+                }
+                
+                Log("<color=red><b>There is a new version of Leaderboard Creator available!</b></color>");
+                
+                var dialog = EditorUtility.DisplayDialog("Leaderboard Creator", 
+                    "There is a new version of Leaderboard Creator available. Download it now?", "Yes", "No");
+                if (!dialog) return;
+                
+                Application.OpenURL(ITCH_PAGE_URL);
+            };
         }
 
         private void OnBecameVisible()
@@ -101,13 +130,20 @@ namespace LeaderboardCreatorEditor
                 SaveLeaderboardsToScript();
 
             if (GUILayout.Button("Manage Leaderboards"))
-                Application.OpenURL("https://danqzq.itch.io/leaderboard-creator");
+                Application.OpenURL(ITCH_PAGE_URL);
 
             DrawSeparator();
             
+            var oldIsUpdateLogsEnabled = Config.isUpdateLogsEnabled;
+            Config.isUpdateLogsEnabled = GUILayout.Toggle(Config.isUpdateLogsEnabled, "Enable Update Logs");
+            if (oldIsUpdateLogsEnabled != Config.isUpdateLogsEnabled)
+                EditorUtility.SetDirty(Config);
+            
             if (GUILayout.Button("<color=#2a9df4>Made by @danqzq</color>",
                     new GUIStyle{alignment = TextAnchor.LowerRight, richText = true}))
-                Application.OpenURL("https://www.danqzq.games");
+                Application.OpenURL(AUTHOR_URL);
+            
+            GUILayout.Label($"<color=white>v{VERSION}</color>", new GUIStyle{alignment = TextAnchor.LowerRight});
         }
 
         private static void DrawSeparator()
@@ -245,6 +281,12 @@ namespace LeaderboardCreatorEditor
             file.WriteLine("}");
             file.Close();
             AssetDatabase.Refresh();
+        }
+        
+        private static void Log(string message)
+        {
+            if (!Config.isUpdateLogsEnabled) return;
+            Debug.Log($"[Leaderboard Creator] {message}");
         }
     }
 }

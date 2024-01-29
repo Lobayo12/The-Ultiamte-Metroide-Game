@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.UI;
 using UnityEngine.UI;
 
+
 public class TimeAndScore : MonoBehaviour
 {
     public float startTime = 0;

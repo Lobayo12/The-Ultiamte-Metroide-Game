@@ -41,6 +41,7 @@ namespace Dan.Main
 
                 var guid = request.downloadHandler.text;
                 PlayerPrefs.SetString(GUID_KEY, guid);
+                PlayerPrefs.Save();
                 callback?.Invoke(guid);
             }));
         }
