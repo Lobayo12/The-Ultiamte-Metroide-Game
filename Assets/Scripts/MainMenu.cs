@@ -85,6 +85,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Settings");
     }
 
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("How to play");
+    }
+
     public void Leaderboard()
     {
         SceneManager.LoadScene("Leaderboard");
