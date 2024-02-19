@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
 
-        SceneManager.LoadScene(newGameScene);
+        SceneManager.LoadScene("Choose the mode");
     }
 
     // Restarts from where the player was with the diffrent abbilites...
