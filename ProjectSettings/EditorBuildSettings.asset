@@ -52,5 +52,11 @@ EditorBuildSettings:
     guid: 89df9a67c94b2bd4fa13f5bdcd156daf
   - enabled: 1
     path: Assets/Scenes/Adventure Mode/Area 2 Adventure.unity
-    guid: 9e21d1f09693f3241a3defc7da37523d
+    guid: bb07f22b2567bc748a13d22cfaca0e73
+  - enabled: 1
+    path: Assets/Scenes/Adventure Mode/Area 3 Adventure.unity
+    guid: 95b4968652be0f2438c4b64acdea7969
+  - enabled: 1
+    path: Assets/Scenes/Adventure Mode/Area 4 Adventure.unity
+    guid: f7e79c90293fd0a4f93d5f5c80ace363
   m_configObjects: {}
