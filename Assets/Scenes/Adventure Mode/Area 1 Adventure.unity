@@ -28458,10 +28458,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 674635860}
     - target: {fileID: 50928985410085400, guid: a06ad8c91d8439f4da3d673ec7fe2c74, type: 3}
-      propertyPath: miniMapMask
-      value: 
-      objectReference: {fileID: 963416540}
-    - target: {fileID: 50928985410085400, guid: a06ad8c91d8439f4da3d673ec7fe2c74, type: 3}
       propertyPath: miniMapTexte
       value: 
       objectReference: {fileID: 171274411}
