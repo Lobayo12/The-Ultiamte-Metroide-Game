@@ -23,6 +23,9 @@ public class FullMapControlling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        transform.position += new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f).normalized * cam.orthographicSize * Time.unscaledDeltaTime;
+
         if(Input.GetKey(KeyCode.E))
         {
             cam.orthographicSize -= zoomSpeed * Time.unscaledDeltaTime;
@@ -30,8 +33,10 @@ public class FullMapControlling : MonoBehaviour
 
         if (Input.GetKey(KeyCode.R))
         {
-            cam.orthographicSize -= zoomSpeed * Time.unscaledDeltaTime;
+            cam.orthographicSize += zoomSpeed * Time.unscaledDeltaTime;
         }
+
+        cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, minZoom, maxZoom);
     }
 
 

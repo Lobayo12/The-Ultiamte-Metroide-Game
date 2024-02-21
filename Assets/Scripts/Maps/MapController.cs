@@ -6,6 +6,10 @@ public class MapController : MonoBehaviour
 {
 
     public GameObject fullMapCam;
+    public GameObject miniMapCam;
+    public GameObject miniMapBorder;
+    public GameObject miniMapTexte;
+
 
 
     // Start is called before the first frame update
@@ -24,12 +28,24 @@ public class MapController : MonoBehaviour
                 UIController.instance.fullscreenMap.SetActive(true);
                 Time.timeScale = 0f;
                 fullMapCam.SetActive(true);
+                miniMapCam.SetActive(false);
+                miniMapBorder.SetActive(false);
+                miniMapTexte.SetActive(false);
+
+
+
+
             }
             else
             {
                 UIController.instance.fullscreenMap.SetActive(false);
                 Time.timeScale = 1f;
                 fullMapCam.SetActive(false);
+                miniMapCam.SetActive(true);
+                miniMapBorder.SetActive(true);
+                miniMapTexte.SetActive(true);
+
+
             }
         }
     }
