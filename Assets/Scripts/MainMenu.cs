@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private UIController uiController;
+
     public string newGameScene;
 
     public GameObject continueButton;
+    public GameObject leaderboardButton;
 
     public PlayerAbilityTracker player;
+    
+
 
 
     // Start is called before the first frame update
@@ -38,7 +43,8 @@ public class MainMenu : MonoBehaviour
         player.gameObject.SetActive(true);
         player.transform.position = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
 
-        if(PlayerPrefs.HasKey("DoubleJumpUnlocked"))
+
+        if (PlayerPrefs.HasKey("DoubleJumpUnlocked"))
         {
             if(PlayerPrefs.GetInt("DoubleJumpUnlocked") == 1)
             {
@@ -98,5 +104,7 @@ public class MainMenu : MonoBehaviour
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("Main Menu");
+
     }
+
 }

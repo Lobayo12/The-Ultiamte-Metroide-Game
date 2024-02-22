@@ -355,6 +355,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &642901885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1280991063589309301, guid: cae7eb0b9f8ed38479643ab5b2025319, type: 3}
+  m_PrefabInstance: {fileID: 1964090721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &829260313
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newGameScene: Area 1
   continueButton: {fileID: 335193460}
+  leaderboardButton: {fileID: 642901885}
   player: {fileID: 0}
 --- !u!1 &1298250079
 GameObject:
