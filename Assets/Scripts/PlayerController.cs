@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
             {
                 dashCounter = dashCounter - Time.deltaTime;
 
-                theRB.velocity = new Vector2(dashSpeed * transform.localScale.x, theRB.velocity.y);
+                theRB.linearVelocity = new Vector2(dashSpeed * transform.localScale.x, theRB.linearVelocity.y);
 
                 afterImageCounter -= Time.deltaTime;
                 if (afterImageCounter <= 0)
@@ -92,14 +92,14 @@ public class PlayerController : MonoBehaviour
             {
 
                 //move sideways
-                theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, theRB.velocity.y);
+                theRB.linearVelocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, theRB.linearVelocity.y);
 
                 //handle direction change
-                if (theRB.velocity.x < 0)
+                if (theRB.linearVelocity.x < 0)
                 {
                     transform.localScale = new Vector3(-1f, 1f, 1f);
                 }
-                else if (theRB.velocity.x > 0)
+                else if (theRB.linearVelocity.x > 0)
                 {
                     transform.localScale = Vector3.one;
                 }
@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
                     AudioManager.instance.PlaySFXAdjusted(9);
                 }
 
-                theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+                theRB.linearVelocity = new Vector2(theRB.linearVelocity.x, jumpForce);
             }
 
             //Takes care of shooting
@@ -190,19 +190,19 @@ public class PlayerController : MonoBehaviour
             }
         } else
         {
-            theRB.velocity = Vector2.zero;
+            theRB.linearVelocity = Vector2.zero;
         }
 
 
         if (standing.activeSelf)
         {
             anim.SetBool("isOnGround", isOnGround);
-            anim.SetFloat("speed", Mathf.Abs(theRB.velocity.x));
+            anim.SetFloat("speed", Mathf.Abs(theRB.linearVelocity.x));
         }
 
         if(ball.activeSelf)
         {
-            ballAnim.SetFloat("speed", Mathf.Abs(theRB.velocity.x));
+            ballAnim.SetFloat("speed", Mathf.Abs(theRB.linearVelocity.x));
         }
     }
 

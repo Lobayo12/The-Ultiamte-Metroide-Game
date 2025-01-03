@@ -24,7 +24,7 @@ public class BossBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        theRB.velocity = -transform.right * moveSpeed;
+        theRB.linearVelocity = -transform.right * moveSpeed;
     }
 
     // Takes care of putting damage to the player and shoot

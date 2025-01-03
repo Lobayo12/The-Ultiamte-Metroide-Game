@@ -33,21 +33,21 @@ public class EnemyPatroller : MonoBehaviour
         {
             if(transform.position.x < patrolPoints[currentPoint].position.x)
             {
-                theRB.velocity = new Vector2(moveSpeed, theRB.velocity.y);
+                theRB.linearVelocity = new Vector2(moveSpeed, theRB.linearVelocity.y);
                 transform.localScale = new Vector3(-1f, 1f, 1f);
             } else
             {
-                theRB.velocity = new Vector2(-moveSpeed, theRB.velocity.y);
+                theRB.linearVelocity = new Vector2(-moveSpeed, theRB.linearVelocity.y);
                 transform.localScale = Vector3.one;
             }
 
-            if(transform.position.y < patrolPoints[currentPoint].position.y -.5f && theRB.velocity.y < .1f )
+            if(transform.position.y < patrolPoints[currentPoint].position.y -.5f && theRB.linearVelocity.y < .1f )
             {
-                theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+                theRB.linearVelocity = new Vector2(theRB.linearVelocity.x, jumpForce);
             }
         } else
         {
-            theRB.velocity = new Vector2(0f, theRB.velocity.y);
+            theRB.linearVelocity = new Vector2(0f, theRB.linearVelocity.y);
 
             waitCounter -= Time.deltaTime;
             if(waitCounter <= 0)
@@ -63,6 +63,6 @@ public class EnemyPatroller : MonoBehaviour
             }
         }
 
-        anim.SetFloat("speed", Mathf.Abs(theRB.velocity.x));
+        anim.SetFloat("speed", Mathf.Abs(theRB.linearVelocity.x));
     }
 }

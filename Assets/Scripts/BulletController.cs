@@ -16,7 +16,7 @@ public class BulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        theRB.velocity = moveDir * bulletSpeed;
+        theRB.linearVelocity = moveDir * bulletSpeed;
     }
 
     // Makes the shot give damage to ennemies and only ennemies
